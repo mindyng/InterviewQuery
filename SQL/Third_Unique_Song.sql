@@ -10,9 +10,9 @@ SELECT name
 , CASE WHEN song_name IS NULL THEN 1 ELSE ROW_NUMBER() OVER (PARTITION BY user_id, song_name ORDER BY date_played) END AS song_play_num
 FROM users
 LEFT JOIN song_plays ON song_plays.user_id = users.id
-ORDER BY 1
-, 2
-, 3
+-- ORDER BY 1
+-- , 2
+-- , 3
 )
 
 , song_play_order AS (
@@ -23,8 +23,8 @@ SELECT name
 , RANK() OVER (PARTITION BY name ORDER BY date_played) AS song_play_order
 FROM song_play
 WHERE song_play_num = 1
-ORDER BY 1
-, 3
+-- ORDER BY 1
+-- , 3
 )
 
 SELECT name
