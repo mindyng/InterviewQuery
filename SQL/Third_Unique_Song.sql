@@ -1,4 +1,4 @@
---join song_plays to users
+--left join users to song plays
 --get earliest time this each song was played (correcting for window fxn on NULLs!)
 --get third song
 --final output should only have non-null from 3rd played song
