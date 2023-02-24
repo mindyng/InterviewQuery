@@ -28,7 +28,7 @@
 -- Column  Type
 -- num_users_gave_like INTEGER
 
---fitler on 6,6,20 and action = like
+--fitler on 6/6/20 and action = like
 --get distinct num users
 
 SELECT COUNT(DISTINCT user_id) AS num_users_gave_like
