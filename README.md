@@ -1,2 +1,2 @@
 # InterviewQuery
-collection of questions from the platform
+collection of questions and solutions from the platform
