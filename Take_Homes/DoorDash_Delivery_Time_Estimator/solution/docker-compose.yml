@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  notebooks:
+    build:
+      context: .
+      dockerfile: notebooks/Dockerfile
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks/:/doordash/notebooks/
+      - ./app/features_extractors/:/doordash/app/features_extractors/
+      - ./data/:/doordash/data/
+      - ./models/:/doordash/models/
+    entrypoint:
+      - 'jupyter'
+      - 'notebook'
+      - '--ip=0.0.0.0'
+      - '--no-browser'
+      - '--port=8888'
+      - '--allow-root'
+
+  predict:
+    build: app
+    volumes:
+      - ./app/:/doordash/app/
+      - ./data/:/doordash/data/
+      - ./models/:/doordash/models/
+      - ./outputs/:/doordash/outputs/
+    entrypoint:
+      - 'python'
+      - 'app/predict.py'
+      - 'data/data_to_predict.json'
+      - 'models/xgboost_model_with_encoders_2020-03-12T14:47:23.005373.pickle'
+      - '--output=outputs/output.tsv'
+
+  tests:
+    build:
+      context: app
+      dockerfile: Dockerfile-tests
+    entrypoint:
+      - 'pytest'
