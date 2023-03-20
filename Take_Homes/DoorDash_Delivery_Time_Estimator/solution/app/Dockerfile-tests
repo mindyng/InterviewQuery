@@ -1,0 +1,12 @@
+FROM python:3.7
+RUN mkdir -p /doordash/app
+WORKDIR /doordash/app
+ENV PYTHONPATH "${PYTONPATH}:/doordash/"
+
+COPY requirements.tests.txt ./
+RUN pip install -r requirements.tests.txt
+
+COPY features_extractors ./features_extractors
+COPY tests ./tests
+
+ENTRYPOINT ["pytest"]
