@@ -1,0 +1,29 @@
+Column Name,Type,Description,Categor
+addr_state,Categorical,Customer State,Customer
+annual_inc,Numeric,Annual Income,Customer
+collections_12_mths_ex_med,Numeric,(Credit based),Customer
+debt-to-income,Numeric,Ratio of debt to income,Loan
+delinq_2yrs,Numeric,Any delinquency in last 2 years,Customer
+earliest_cr_line,Date,First credit date,Customer
+emp_length,Numeric,Length in current job,Customer
+emp_title,Text,Employee Title,Customer
+home_ownership,Categorical,Housing Status,Customer
+Id,Numeric,Sequential number,Identifier
+initial_list_status,Categorical,Loan status,Loan
+inq_last_6mths,Numeric,Number of inquiries,Customer
+is_bad,Numeric,1 or 0,Target
+mths_since_last_delinq,Numeric,Months since last delinquency,Customer
+mths_since_last_major_derog,Numeric,(Credit based),Customer
+mths_since_last_record,Numeric,Months since last record,Customer
+Notes,Text,Notes taken by the administrator,Loan
+open_acc,Numeric,(Credit based),Customer
+pymnt_plan,Categorical,Current Payment Plans,Customer
+policy_code,Categorical,Loan type,Loan
+pub_rec,Numeric,(Credit based),Customer
+purpose,Text,Purpose for the loan,Loan
+purpose_cat,Categorical,Purpose category for the loan,Loan
+revol_bal,Numeric,(Credit based),Customer
+revol_util,Numeric,(Credit based),Customer
+total_acc,Numeric,(Credit based),Customer
+verification_status,Categorical,Income Verified,Loan
+zip_code,Categorical,Customer zip code,Customer
