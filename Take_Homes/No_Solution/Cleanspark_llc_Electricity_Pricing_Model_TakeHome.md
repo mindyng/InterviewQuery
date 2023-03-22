@@ -30,7 +30,7 @@ We need to make sure you know how to run the tests we have written. Run the foll
 !python -m pytest
 You should see that all the tests are failing. It is your job to get these tests to pass by writing code. Keep reading for a description of the code you will need to write. The code of billing_unit_test.py is included below
 
-```{python} print("Hello Python!") ```
+```
 """Unit test suite for clsk.billing."""
 
 from math import isclose
@@ -56,6 +56,7 @@ data = billing._get_data()
 result = billing.demand_charge(data)
 # Assert -----------------------------------------------------------------
 assert isclose(result, 2240.0, rel_tol=1e-4)
+```
 
 NOTE: You should not alter billing_unit_test.py. These tests were written for you to pass and to expose you to how to write tests in Python.
 
