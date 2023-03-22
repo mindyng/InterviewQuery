@@ -58,7 +58,7 @@ result = billing.demand_charge(data)
 assert isclose(result, 2240.0, rel_tol=1e-4)
 ```
 
-NOTE: You should not alter billing_unit_test.py. These tests were written for you to pass and to expose you to how to write tests in Python.
+NOTE: You should not alter ```billing_unit_test.py```. These tests were written for you to pass and to expose you to how to write tests in Python.
 
 
 Problem Description
