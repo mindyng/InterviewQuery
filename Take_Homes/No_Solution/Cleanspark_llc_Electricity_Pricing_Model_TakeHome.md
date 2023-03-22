@@ -111,7 +111,7 @@ Energy rates
 
 | Period | Rates |
 | ------------- | ------------- |
-| Weekends  | \$0.05/kWh - 1 - Weekdays (12:00 am - 4:00 pm)-  \$0.20/kWh |
+| Weekends  | \$0.05/kWh - Weekdays (12:00 am - 4:00 pm) - \$0.20/kWh |
 | Weekdays (4:00 pm - 9:00 pm) | \$0.30/kWh - Weekdays (9:00 pm - 12:00 am) - \$0.10/kWh |
 
 Demand rates
